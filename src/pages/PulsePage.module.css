@@ -1,0 +1,171 @@
+.page {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 1100px) { .page { grid-template-columns: 1fr; } }
+
+.leftCol  { display: flex; flex-direction: column; gap: 16px; }
+.rightCol { display: flex; flex-direction: column; gap: 16px; }
+
+/* Section header */
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border-light);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.unreadBadge {
+  margin-left: auto;
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 20px;
+}
+
+/* AvaniBot */
+.avaniCard { display: flex; flex-direction: column; overflow: hidden; }
+.avaniHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.avaniIcon {
+  width: 34px; height: 34px;
+  background: var(--green-light);
+  color: var(--green-mid);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.avaniTitle { font-size: 13px; font-weight: 700; }
+.avaniSub   { font-size: 11px; color: var(--text-muted); }
+
+.chatMessages {
+  flex: 1;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 220px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+.chatBubble { display: flex; gap: 8px; align-items: flex-end; }
+.userBubble { flex-direction: row-reverse; }
+.botBubble  { flex-direction: row; }
+.botAvatar  { flex-shrink: 0; }
+.userAvatar { flex-shrink: 0; }
+.bubbleBody { max-width: 78%; }
+.bubbleText {
+  padding: 9px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.botBubble  .bubbleText { background: var(--bg-page); border-bottom-left-radius: 3px; color: var(--text-primary); }
+.userBubble .bubbleText { background: var(--green-primary); color: #fff; border-bottom-right-radius: 3px; }
+.bubbleTime { font-size: 10px; color: var(--text-muted); margin-top: 3px; text-align: right; }
+.botBubble .bubbleTime { text-align: left; }
+
+.chatInput {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border-light);
+}
+.chatInput .input { flex: 1; }
+
+/* Agents */
+.agentsList { padding: 6px 0; }
+.agentItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.agentItem:last-child { border-bottom: none; }
+.agentEmoji { font-size: 18px; flex-shrink: 0; }
+.agentInfo { flex: 1; min-width: 0; }
+.agentName { font-size: 13px; font-weight: 500; }
+.agentDesc { font-size: 11px; color: var(--text-muted); }
+
+/* Channels */
+.channelsCard { overflow: hidden; }
+.channelItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border-light);
+  cursor: pointer;
+  background: none;
+  border-left: none; border-right: none; border-top: none;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.12s;
+}
+.channelItem:last-child { border-bottom: none; }
+.channelItem:hover { background: var(--bg-page); }
+.channelItem:focus-visible { outline: 2px solid var(--green-accent); outline-offset: -2px; }
+.channelLeft  { display: flex; align-items: center; gap: 8px; }
+.channelRight { display: flex; align-items: center; gap: 6px; }
+.channelHash  { font-size: 14px; font-weight: 600; color: var(--text-muted); }
+.channelName  { font-size: 13px; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 4px; }
+.channelDesc  { font-size: 11px; color: var(--text-muted); }
+.pinIcon      { color: var(--gold); }
+.channelUnread {
+  background: var(--green-mid);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 20px;
+  min-width: 18px;
+  text-align: center;
+}
+.channelChevron { color: var(--text-muted); }
+
+/* Team */
+.teamCard { overflow: hidden; }
+.teamMember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.teamMember:last-child { border-bottom: none; }
+.memberInfo { flex: 1; min-width: 0; }
+.memberName { font-size: 12px; font-weight: 600; }
+.memberRole { font-size: 11px; color: var(--text-muted); }
+.memberStats { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; flex-shrink: 0; }
+.memberCallStat { font-size: 11px; color: var(--text-secondary); font-weight: 500; }
+.memberConvStat { font-size: 10px; color: var(--green-mid); font-weight: 600; }
+
+/* Kudos */
+.kudosCard { overflow: hidden; }
+.kudoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+.kudoItem:last-child { border-bottom: none; }
+.kudoEmoji { font-size: 18px; flex-shrink: 0; line-height: 1; }
+.kudoBody  { flex: 1; min-width: 0; }
+.kudoText  { font-size: 12px; font-weight: 500; margin-bottom: 2px; }
+.kudoMsg   { font-size: 12px; color: var(--text-secondary); }
+.kudoDate  { font-size: 10px; color: var(--text-muted); margin-top: 4px; }

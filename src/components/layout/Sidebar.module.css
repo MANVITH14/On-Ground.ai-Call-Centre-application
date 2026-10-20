@@ -1,0 +1,118 @@
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 16px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+.logoIcon {
+  width: 30px; height: 30px;
+  background: var(--green-accent);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+.logoName {
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+.logoSub {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 1px;
+  letter-spacing: 0.04em;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 8px;
+  flex: 1;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.15s;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: inherit;
+  text-decoration: none;
+}
+.navItem:hover { color: #fff; background: rgba(255,255,255,0.08); }
+.navItem.active {
+  color: #fff;
+  background: rgba(255,255,255,0.14);
+  font-weight: 600;
+}
+.navLabel { flex: 1; }
+.chevron { color: rgba(255,255,255,0.4); }
+.navItem.active .chevron { color: rgba(255,255,255,0.7); }
+
+.subNav { padding-left: 8px; }
+.subItem {
+  font-size: 12px;
+  padding: 6px 10px;
+  color: rgba(255,255,255,0.5);
+}
+.subItem:hover { color: #fff; }
+.subItem.active { color: #fff; background: rgba(255,255,255,0.12); }
+
+/* Agent card */
+.agentCard {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 12px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+.agentAvatar {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+  font-size: 10px !important;
+}
+.agentInfo { flex: 1; min-width: 0; }
+.agentName {
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agentRole {
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 1px;
+}
+
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+}

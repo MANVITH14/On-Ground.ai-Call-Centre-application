@@ -1,0 +1,72 @@
+.topbar {
+  height: var(--topbar-h);
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow-xs);
+}
+
+.left { display: flex; align-items: center; gap: 16px; }
+
+.pageTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.pageSub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 1px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchForm { position: relative; }
+
+.iconBtn {
+  position: relative;
+  color: var(--text-secondary);
+}
+.notifBadge {
+  position: absolute;
+  top: 3px; right: 3px;
+  width: 14px; height: 14px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 8px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.agentMenu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px 5px 6px;
+  border-radius: var(--radius-sm);
+  background: none;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.agentMenu:hover { background: var(--bg-page); }
+.agentName { font-size: 12px; }

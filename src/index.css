@@ -1,0 +1,114 @@
+/* ── Google Font ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ── Design Tokens ───────────────────────────────────────────────────────── */
+:root {
+  /* Palette */
+  --bg-page:        #F8F7F2;
+  --bg-card:        #FFFFFF;
+  --bg-sidebar:     #1A3C34;
+  --bg-sidebar-hover: #22503F;
+  --bg-sidebar-active: #2D6A57;
+
+  --green-primary:  #1A3C34;
+  --green-mid:      #2D6A57;
+  --green-light:    #E8F3EF;
+  --green-accent:   #3AA878;
+
+  --gold:           #B5873A;
+  --gold-light:     #FDF3E0;
+  --gold-bg:        #FEF9F0;
+
+  --text-primary:   #1C1C1E;
+  --text-secondary: #5A5A6A;
+  --text-muted:     #9B9BAD;
+  --text-inverse:   #FFFFFF;
+
+  --border:         #E4E3DD;
+  --border-light:   #F0EFEA;
+
+  --red:            #DC3545;
+  --red-light:      #FFF0F0;
+  --orange:         #E07B39;
+  --orange-light:   #FFF4EC;
+  --blue:           #2563EB;
+  --blue-light:     #EFF6FF;
+
+  --shadow-xs: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.06);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --sidebar-w: 220px;
+  --topbar-h:  56px;
+
+  --font: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: 14px; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg-page);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ── Scrollbar ───────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D0CFC8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B0AFA8; }
+
+/* ── Utility ─────────────────────────────────────────────────────────────── */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+
+.flex { display: flex; }
+.flex-col { display: flex; flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 4px; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.gap-4 { gap: 16px; }
+.mt-1 { margin-top: 4px; }
+.mt-2 { margin-top: 8px; }
+.mt-3 { margin-top: 12px; }
+.mt-4 { margin-top: 16px; }
+.w-full { width: 100%; }
+.text-sm { font-size: 12px; }
+.text-muted { color: var(--text-muted); }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

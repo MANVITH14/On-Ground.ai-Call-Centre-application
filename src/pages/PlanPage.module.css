@@ -1,0 +1,34 @@
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.statsRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.statNum {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.statLabel {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.rowDone td { opacity: 0.5; }
