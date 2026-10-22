@@ -34,6 +34,31 @@ export const weeklyChartData = [
 
 export const leads = [
   {
+    id: 'LD-000',
+    name: 'Manvith (You)',
+    company: 'On-Ground.ai',
+    designation: 'Developer',
+    phone: '+918618153704',
+    email: 'manvith@on-ground.ai',
+    icpScore: 99,
+    intentScore: 99,
+    status: 'Hot',
+    segment: 'Internal',
+    revenue: '—',
+    employees: 1,
+    location: 'India',
+    lastContact: '2026-10-22',
+    nextAction: 'Test call',
+    assignedTo: 'Priya Sharma',
+    buyingSignals: [
+      { signal: 'Actively testing the platform', date: '2026-10-22', strength: 'Strong' },
+    ],
+    callHistory: [],
+    notes: 'Internal test number. Use this lead to verify live calling works.',
+    product: 'On-Ground.ai Platform',
+    dealSize: '—',
+  },
+  {
     id: 'LD-001',
     name: 'Arjun Mehta',
     company: 'FreshMart Retail Pvt Ltd',
